@@ -398,6 +398,7 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
+/.idea/
 *.sln.iml
 
 ##
@@ -475,4 +476,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-/.idea/
