@@ -138,10 +138,12 @@ class Supermarket
         {
             Console.WriteLine("\nКорзина клиента:");
             client.ShowCart();
-            
-            Thread.Sleep(1000);
 
             int cost = CalculateCost(client);
+
+            Console.WriteLine(new string('-', 16) + $"\nИтого: {cost} руб.");
+            
+            Thread.Sleep(1000);
 
             if (cost > 0 && client.TryBuy(cost))
             {
