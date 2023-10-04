@@ -59,14 +59,9 @@ class Client
         _money = money;
         _cart = new List<Product>();
         
-        AddToCart(new Apples());
-        AddToCart(new Bacon());
-        AddToCart(new Caviar());
-    }
-
-    public void AddToCart(Product product)
-    {
-        _cart.Add(product);
+        _cart.Add(new Apples());
+        _cart.Add(new Bacon());
+        _cart.Add(new Caviar());
     }
 
     public void RemoveRandomProduct()
@@ -88,7 +83,7 @@ class Client
 
     public void ShowCart()
     {
-        foreach (var product in _cart)
+        foreach (Product product in _cart)
             product.ShowInfo();
     }
 
@@ -130,7 +125,7 @@ class Supermarket
         Console.WriteLine($"Очередь подошла к концу. Выручка за рабочий день: {_money} руб.");
     }
 
-    public void AcceptBuyer(Client client)
+    private void AcceptBuyer(Client client)
     {
         bool isPurchaseDone = false;
 
